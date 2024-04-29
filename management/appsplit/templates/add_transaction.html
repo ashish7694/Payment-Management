@@ -1,0 +1,18 @@
+<!-- add_transaction.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Transaction</title>
+</head>
+<body>
+    <h1>Add Transaction</h1>
+    <form method="post",action="{% url 'add_transaction' %}">
+        {% csrf_token %}
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount">
+        <button type="submit">Submit</button>
+        <a href="{% url 'logout' %}">Logout</a>
+    </form>
+</body>
+</html>
